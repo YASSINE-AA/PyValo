@@ -69,7 +69,7 @@ pip install requests #On Windows
 pip3 install requests #On Linux
 ```
 
-4. Pass the region and API key as class parameters:
+4. Pass in the Region and API key as class parameters:
 
 ```
 contentAPI = ContentAPI(REGION, API_KEY, LOCALE) # Locale by default is en-US

@@ -8,16 +8,7 @@
 
   <p align="center">
     Unofficial Valorant API
-    <br/>
-    <br/>
-    <a href="https://github.com/YASSINE-AA/PyValo"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com/YASSINE-AA/PyValo">View Demo</a>
-    .
-    <a href="https://github.com/YASSINE-AA/PyValo/issues">Report Bug</a>
-    .
-    <a href="https://github.com/YASSINE-AA/PyValo/issues">Request Feature</a>
+  
   </p>
 </p>
 

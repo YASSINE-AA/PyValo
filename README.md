@@ -73,7 +73,7 @@ pip install requests #On Windows
 pip3 install requests #On Linux
 ```
 
-#### Install PyValo API Via Pip package manager
+#### Install PyValo API Via PIP package manager
 ```
 pip install pyvaloapi
 ```

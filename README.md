@@ -126,7 +126,7 @@ match_api = client.match_api("eu")
 ```
 Get list of matches by PUUID in JSON format:
 ```python
-list_of_matches = match_api.get_matches_by_puuid(PUUID)
+list_of_matches = match_api.get_matches_by_puuid(userID)
 ```
 
 Get list of matches by matchID in JSON format:

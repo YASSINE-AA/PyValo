@@ -9,7 +9,7 @@
   <p align="center">
     Unofficial Valorant API for Python
     <br /><p align="center">
-https://pypi.org/project/pyvaloapi/1.0.1/
+[Visit on PyPi](https://pypi.org/project/pyvaloapi/1.0.2/)
 </p>
 
   </p>
@@ -70,7 +70,7 @@ git clone https://github.com/YASSINE-AA/PyValo
 
 #### Via Pip package manager
 ```
-pip install pyvaloapi==1.0.1
+pip install pyvaloapi
 ```
 
 ```

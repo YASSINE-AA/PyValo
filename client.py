@@ -68,63 +68,75 @@ class ContentAPI:
 
 	"""
 	def __init__(self, REGION, API_KEY, LOCALE):
-		
-		self.request = Request(f"https://{REGION}.api.riotgames.com/val/content/v1/contents?locale={LOCALE}", gen_access_token(API_KEY))
-		self.response_json = self.request.get_json()
-		self.response_content = self.response_json["value"]
+		self.API_KEY = API_KEY
+		self.REGION = REGION
+		self.LOCALE = LOCALE
+
+	def handle_request(self, key=None):
+		request = Request(f"https://{self.REGION}.api.riotgames.com/val/content/v1/contents?locale={self.LOCALE}", gen_access_token(self.API_KEY))
+		response_json = request.get_json()
+		response_content = response_json["value"]
 		response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
 		
-		if self.response_json["status_code"] != 200:
-			print(f"Failed: {self.response_json['status_code']} {response_codes[str(self.response_json['status_code'])]}")
-			exit(1)
+		if response_json["status_code"] != 200:
+			print(f"Failed: {response_json['status_code']} {response_codes[str(response_json['status_code'])]}")
+			return False
+
+		if key:
+			return response_content[key]
+		else:
+			return response_content
+
+	def get_json(self):
+		return self.handle_request()
 
 	def get_characters(self):
-		return self.response_content["characters"]
+		return self.handle_request("characters")
 
 	def get_maps(self):
-		return self.response_content["maps"]
+		return self.handle_request("maps")
 
 	def get_chromas(self):
-		return self.response_content["chromas"]
+		return self.handle_request("chromas")
 
 	def get_skins(self):
-		return self.response_content["skins"]
+		return self.handle_request("skins")
 
 	def get_skinLevels(self):
-		return self.response_content["skinLevels"]
+		return self.handle_request("skinLevels")
 
 	def get_equips(self):
-		return self.response_content["equips"]
+		return self.handle_request("equips")
 
 	def get_gameModes(self):
-		return self.response_content["gameModes"]
+		return self.handle_request("gameModes")
 
 	def get_sprays(self):
-		return self.response_content["sprays"]
+		return self.handle_request("sprays")
 
 	def get_sprayLevels(self):
-		return self.response_content["sprayLevels"]
+		return self.handle_request("sprayLevels")
 
 	def get_charms(self):
-		return self.response_content["charms"]
+		return self.handle_request("charms")
 
 	def get_charmLevels(self):
-		return self.response_content["charmLevels"]
+		return self.handle_request("charmLevels")
 
 	def get_playerCards(self):
-		return self.response_content["playerCards"]
+		return self.handle_request("playerCards")
 
 	def get_playerTitles(self):
-		return self.response_content["playerTitles"]
+		return self.handle_request("playerTitles")
 
 	def get_acts(self):
-		return self.response_content["acts"]
+		return self.handle_request("acts")
 
 	def get_newest_act(self):
-		return self.response_content["acts"][-1]
+		return self.handle_request("acts")[-1]
 
 	def get_active_act(self):
-		for act in self.response_content["acts"]:
+		for act in self.handle_request("acts"):
 			if act["isActive"] == True:
 				return act
 
@@ -157,14 +169,12 @@ class MatchAPI:
 		response = Request(self.base_url + suffix, gen_access_token(self.API_KEY))
 		response = response.get_json()
 		if response["status_code"] != 200:
-
 			print(f"failed: {response['status_code']} {self.response_codes[str(response['status_code'])]}")
-			exit(1)
+			return False
 		return response["value"]
 
 	def get_matches_by_id(self, matchID):
 		return self.handle_request(f"matches/{matchId}")
-
 
 	def get_matches_by_puuid(self, puuid):
 		return self.handle_request(f"matchlists/by-puuid/{puuid}")
@@ -173,33 +183,49 @@ class MatchAPI:
 		return self.handle_request(f"recent-matches/by-queue/{queue}")
 
 
+
+"""
+RETURN
+
+shard	string	The shard for the given leaderboard.
+actId	string	The act id for the given leaderboard. Act ids can be found using the val-content API.
+totalPlayers	long	The total number of players in the leaderboard.
+players	List[PlayerDto]
+
+"""
+
 class RankedAPI:
-	"""
-	RETURN
-
-	shard	string	The shard for the given leaderboard.
-	actId	string	The act id for the given leaderboard. Act ids can be found using the val-content API.
-	totalPlayers	long	The total number of players in the leaderboard.
-	players	List[PlayerDto]
-
-	"""
 	def __init__(self, REGION, ACT_ID, API_KEY, SIZE, START_INDEX):
+		self.API_KEY = API_KEY
+		self.REGION = REGION
+		self.ACT_ID = ACT_ID
+		self.SIZE = SIZE
+		self.START_INDEX = START_INDEX
 
-		self.response = Request(f"https://{REGION}.api.riotgames.com/val/ranked/v1/leaderboards/by-act/{ACT_ID}?size={SIZE}&startIndex={START_INDEX}", gen_access_token(API_KEY))
-		self.response_json = self.response.get_json()
-		self.response_content = self.response_json["value"]
+	def handle_request(self, key=None):
+		response = Request(f"https://{self.REGION}.api.riotgames.com/val/ranked/v1/leaderboards/by-act/{self.ACT_ID}?size={self.SIZE}&startIndex={self.START_INDEX}", gen_access_token(self.API_KEY))
+		response_json = response.get_json()
+		response_content = response_json["value"]
 		response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
 		
-		if self.response_json["status_code"] != 200:
-			print(f"Failed: {self.response_json['status_code']} {response_codes[str(self.response_json['status_code'])]}")
-			exit(1)
+		if response_json["status_code"] != 200:
+			print(f"Failed: {response_json['status_code']} {response_codes[str(response_json['status_code'])]}")
+			return False
 
-	def get_players(self):
-		# Returns dictionary containing totalPlayers and players
-		return self.response_content["players"]
+		if key:
+			return response_content[key]
+		else:
+			return response_content
+
+	def get_json(self):
+		return self.handle_request()
+
+	def get_players(self):		
+		return self.handle_request("players")
+
 	
 	def get_total_num_players(self):
-		return self.response_content["totalPlayers"]
+		return self.handle_request("totalPlayers")
 
 	def get_player_by_rank(self, rank):
 		
@@ -213,10 +239,10 @@ class RankedAPI:
 		"""
 
 		try:
-			return self.response_content["players"][rank-1]
+			return self.handle_request("players")[rank-1]
 		except:
 			print("Index out of range (maybe check size/start index)")
-			return -1
+			return False
 
 class StatusAPI:
 	"""
@@ -268,31 +294,41 @@ class StatusAPI:
 
 	"""
 	def __init__(self, REGION, API_KEY):
-		self.response = Request(f"https://{REGION}.api.riotgames.com/val/status/v1/platform-data", gen_access_token(API_KEY))
-		self.response = self.response.get_json()
-		self.response_content = self.response["value"]
+		self.API_KEY = API_KEY
+		self.REGION = REGION
+
+	def handle_request(self, key=None):
+		response = Request(f"https://{self.REGION}.api.riotgames.com/val/status/v1/platform-data", gen_access_token(self.API_KEY))
+		response = response.get_json()
+		response_content = response["value"]
 		response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
 			
-		if self.response["status_code"] == 200:
-			print("Success")
+		if response["status_code"] != 200:
+			print(f"Failed: {response['status_code']} ({response_codes[str(response['status_code'])]})")
+			return False
+
+		if key:
+			return response_content[key]
 		else:
-			print(f"Failed: {self.response['status_code']} ({response_codes[str(self.response['status_code'])]})")
-			exit(1)
+			return response_content
+
+	def get_json(self):
+		return self.handle_request()
 
 	def get_platform_name(self):
-		return self.response_content["name"]
+		return self.handle_request("name")
 
 	def get_platform_id(self):
-		return self.response_content["id"]
+		return self.handle_request("id")
 
 	def get_locales(self):
-		return self.response_content["locales"]
+		return self.handle_request("locales")
 
 	def get_maintenances(self):
-		return self.response_content["maintenances"]
+		return self.handle_request("maintenances")
 
 	def get_incidents(self):
-		return self.response_content["incidents"]
+		return self.handle_request("incidents")
 
 class PyValoClient:
 	def __init__(self, API_KEY):

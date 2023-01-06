@@ -5,8 +5,8 @@
     
   </a>
 
-  <h3 align="center">PyValo<br /><a href="https://pypi.org/project/pyvalo-api/">Visit on PyPi</a></h3>
-  
+  <h3 align="center">PyValo</h3>
+  <br /><a href="https://pypi.org/project/pyvalo-api/"><p align="center">Visit on PyPi</p></a>
   <p align="center">
     Unofficial Valorant API for Python
   

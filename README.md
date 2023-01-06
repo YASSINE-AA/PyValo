@@ -39,7 +39,7 @@ Working APIs for the moment are:
 
 ## Built With
 
-Simple HTTP GET requests to the official Valorant API and the JSON library for python.
+* Python
 
 ## Getting Started
 

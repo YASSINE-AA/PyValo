@@ -2,10 +2,11 @@
 <p align="center">
   <a href="https://github.com/YASSINE-AA/PyValo">
     <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/9e82757e9a1c12cb710ad680db11f6f1.png" alt="Logo" width="80" height="80">
+    
   </a>
 
   <h3 align="center">PyValo</h3>
-
+  <a align="center" href="https://pypi.org/project/pyvalo-api/">Visit on PyPi</a>
   <p align="center">
     Unofficial Valorant API for Python
   

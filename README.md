@@ -66,7 +66,7 @@ git clone https://github.com/YASSINE-AA/PyValo
 
 3. Install requests module
 
-# Via Pip package manager
+#### Via Pip package manager
 ```
 pip install pyvalo-api
 ```

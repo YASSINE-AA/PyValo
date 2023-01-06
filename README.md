@@ -7,7 +7,7 @@
   <h3 align="center">PyValo</h3>
 
   <p align="center">
-    Unofficial Valorant API
+    Unofficial Valorant API for Python
   
   </p>
 </p>

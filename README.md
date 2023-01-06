@@ -63,7 +63,6 @@ pip3 install requests #On Linux/Mac
 ```sh
 git clone https://github.com/YASSINE-AA/PyValo
 ```
-Happy Coding!
 
 #### Install PyValo API Via PIP package manager
 ```
@@ -129,7 +128,7 @@ Get list of matches by queue in JSON format:
 ```python
 list_of_matches = match_api.get_matches_by_queue(queue)
 ```
-
+Happy Coding!
 ## Authors
 
 * **Yassine Ahmed Ali** - *Computer Engineering Student* - [Yassine Ahmed Ali](https://github.com/YASSINE-AA) - *Developer*

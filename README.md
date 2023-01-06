@@ -82,25 +82,25 @@ pip install pyvaloapi
 
 Pass in the API key for the PyValoClient Class:
 
-```
+```python
 from pyvaloapi.api import PyValoClient
 client = PyValoClient("API_KEY")
 ```
 
 Now you can call any of the 4 APIs and passing in their respective regions:
 * Status API V1
-```
+```python
 status_api = client.status_api("eu") 
 ```
 Example: 
 We want to get the maintenances  in JSON format:
-```
+```python
 maintenances = status_api.get_maintenances()
 print(maintenances)
 ```
 
 * Content API V1
-```
+```python
 content_api = client.content_api("eu") 
 ```
 Example:
@@ -111,30 +111,30 @@ print(list_of_skins)
 ```
 
 * Ranked API V1
-```
+```python
 ranked_api = client.ranked_api("eu", content_api.get_active_act()["id"], "10", "0") # We use the Content API to get the currently active ACT
 ```
 Example:
 We want to get the Top Radiant in the game for the current ACT in JSON format:
-```
+```python
 top_player = ranked_api.get_player_by_rank(1)
 print(top_player["gameName"], top_player["tagLine"], sep="#") #Outputs: never#god
 ```
 * Match API V1 (Requires Production API Key)
-```
+```python
 match_api = client.match_api("eu")
 ```
 Get list of matches by PUUID in JSON format:
-```
+```python
 list_of_matches = match_api.get_matches_by_puuid(PUUID)
 ```
 
 Get list of matches by matchID in JSON format:
-```
+```python
 list_of_matches = match_api.get_matches_by_id(matchID)
 ```
 Get list of matches by queue in JSON format:
-```
+```python
 list_of_matches = match_api.get_matches_by_queue(queue)
 ```
 

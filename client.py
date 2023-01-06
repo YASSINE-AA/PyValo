@@ -173,18 +173,16 @@ class MatchAPI:
 		return self.handle_request(f"recent-matches/by-queue/{queue}")
 
 
-
-"""
-RETURN
-
-shard	string	The shard for the given leaderboard.
-actId	string	The act id for the given leaderboard. Act ids can be found using the val-content API.
-totalPlayers	long	The total number of players in the leaderboard.
-players	List[PlayerDto]
-
-"""
-
 class RankedAPI:
+	"""
+	RETURN
+
+	shard	string	The shard for the given leaderboard.
+	actId	string	The act id for the given leaderboard. Act ids can be found using the val-content API.
+	totalPlayers	long	The total number of players in the leaderboard.
+	players	List[PlayerDto]
+
+	"""
 	def __init__(self, REGION, ACT_ID, API_KEY, SIZE, START_INDEX):
 
 		self.response = Request(f"https://{REGION}.api.riotgames.com/val/ranked/v1/leaderboards/by-act/{ACT_ID}?size={SIZE}&startIndex={START_INDEX}", gen_access_token(API_KEY))

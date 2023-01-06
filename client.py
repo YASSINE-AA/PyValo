@@ -1,6 +1,8 @@
 from utils.gen_access_token import gen_access_token
 from utils.request import Request
 
+response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
+
 class ContentAPI:
 	"""
 	========================================
@@ -76,8 +78,6 @@ class ContentAPI:
 		request = Request(f"https://{self.REGION}.api.riotgames.com/val/content/v1/contents?locale={self.LOCALE}", gen_access_token(self.API_KEY))
 		response_json = request.get_json()
 		response_content = response_json["value"]
-		response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
-		
 		if response_json["status_code"] != 200:
 			print(f"Failed: {response_json['status_code']} {response_codes[str(response_json['status_code'])]}")
 			return False
@@ -162,8 +162,6 @@ class MatchAPI:
 	def __init__(self, REGION, API_KEY):
 		self.API_KEY = API_KEY
 		self.base_url = f"https://{REGION}.api.riotgames.com/val/match/v1/"
-		self.response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
-		
 
 	def handle_request(self, suffix):
 		response = Request(self.base_url + suffix, gen_access_token(self.API_KEY))
@@ -206,7 +204,6 @@ class RankedAPI:
 		response = Request(f"https://{self.REGION}.api.riotgames.com/val/ranked/v1/leaderboards/by-act/{self.ACT_ID}?size={self.SIZE}&startIndex={self.START_INDEX}", gen_access_token(self.API_KEY))
 		response_json = response.get_json()
 		response_content = response_json["value"]
-		response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
 		
 		if response_json["status_code"] != 200:
 			print(f"Failed: {response_json['status_code']} {response_codes[str(response_json['status_code'])]}")
@@ -301,7 +298,6 @@ class StatusAPI:
 		response = Request(f"https://{self.REGION}.api.riotgames.com/val/status/v1/platform-data", gen_access_token(self.API_KEY))
 		response = response.get_json()
 		response_content = response["value"]
-		response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
 			
 		if response["status_code"] != 200:
 			print(f"Failed: {response['status_code']} ({response_codes[str(response['status_code'])]})")
@@ -345,3 +341,4 @@ class PyValoClient:
 
 	def match_api(self, REGION):
 		return MatchAPI(REGION, self.API_KEY)
+

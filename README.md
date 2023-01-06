@@ -71,7 +71,7 @@ pip3 install requests #On Linux
 ```
 ## Usage
 
-Pass in the API key for the Client Class:
+Pass in the API key for the PyValoClient Class:
 
 ```
 client = PyValoClient("API_KEY")

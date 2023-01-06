@@ -82,6 +82,7 @@ pip3 install requests #On Linux
 Pass in the API key for the PyValoClient Class:
 
 ```
+from pyvaloapi.api import PyValoClient
 client = PyValoClient("API_KEY")
 ```
 

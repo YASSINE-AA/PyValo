@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/YASSINE-AA/PyValo">
-    <img src="https://preview.redd.it/buzyn25jzr761.png?width=1000&format=png&auto=webp&s=c8a55973b52a27e003269914ed1a883849ce4bdc" alt="Logo" width="80" height="80">
+    <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/9e82757e9a1c12cb710ad680db11f6f1.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">PyValo</h3>

@@ -309,17 +309,3 @@ class PyValoClient:
 
 	def match_api(self, REGION):
 		return MatchAPI(REGION, self.API_KEY)
-
-client = PyValoClient("API_KEY")
-
-status_api = client.status_api("eu") 
-
-content_api = client.content_api("eu") 
-
-ranked_api = client.ranked_api("eu", content_api.get_active_act()["id"], "10", "0")
-
-match_api = client.match_api("eu")
-
-print(ranked_api.get_player_by_rank(1)["gameName"], ranked_api.get_player_by_rank(1)["tagLine"], sep="#")
-
-print(match_api.get_matches_by_puuid(ranked_api.get_player_by_rank(1)["puuid"]))

@@ -68,16 +68,64 @@ git clone https://github.com/YASSINE-AA/PyValo
 pip install requests #On Windows
 pip3 install requests #On Linux
 ```
-
-4. Pass in the Region and API key as class parameters:
-
-```
-contentAPI = ContentAPI(REGION, API_KEY, LOCALE) # Locale by default is en-US
-```
-
 ## Usage
 
-For instance we can use the ContentAPI Class to fetch the list of all skins in the game: ```contentAPI.get_skins()```
+Pass in the API key for the Client Class:
+
+```
+client = PyValoClient("API_KEY")
+```
+
+Now you can call any of the 4 APIs and passing in their respective regions:
+* Status API V1
+```
+status_api = client.status_api("eu") 
+```
+Example: 
+We want to get the maintenances  in JSON format:
+```
+maintenances = status_api.get_maintenances()
+print(maintenances)
+```
+
+* Content API V1
+```
+content_api = client.content_api("eu") 
+```
+Example:
+We want to get the list of all skins in the game in JSON format:
+```
+list_of_skins = content_api.get_skins()
+print(list_of_skins)
+```
+
+* Ranked API V1
+```
+ranked_api = client.ranked_api("eu", content_api.get_active_act()["id"], "10", "0") # We use the Content API to get the currently active ACT
+```
+Example:
+We want to get the Top Radiant in the game for the current ACT in JSON format:
+```
+top_player = ranked_api.get_player_by_rank(1)
+print(top_player["gameName"], top_player["tagLine"], sep="#") #Outputs: never#god
+```
+* Match API V1 (Requires Production API Key)
+```
+match_api = client.match_api("eu")
+```
+Get list of matches by PUUID in JSON format:
+```
+list_of_matches = match_api.get_matches_by_puuid(PUUID)
+```
+
+Get list of matches by matchID in JSON format:
+```
+list_of_matches = match_api.get_matches_by_id(matchID)
+```
+Get list of matches by queue in JSON format:
+```
+list_of_matches = match_api.get_matches_by_queue(queue)
+```
 
 
 ## Contributing

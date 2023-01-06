@@ -31,7 +31,7 @@ https://pypi.org/project/pyvaloapi/1.0.6/
 
 ## About The Project
 
-This is just a simple python wrapper for the official Valorant API on: https://developer.riotgames.com/
+This is just a simple python wrapper for the [Official Valorant API](https://developer.riotgames.com/apis)
 
 Working APIs for the moment are:
 * Valorant Content API V1
@@ -46,32 +46,25 @@ Working APIs for the moment are:
 
 ## Getting Started
 
-You first need to get an API key from the official valorant developer portal: https://developer.riotgames.com/
-
-
-
 ### Prerequisites
 
 * Requests module to send GET requests to the official API
 
-
+```
+pip install requests #On Windows
+pip3 install requests #On Linux/Mac
+```
 
 ### Installation
 
-1. Get a RIOT API Key at [ https://developer.riotgames.com/](https://developer.riotgames.com/m)
+1. Get a RIOT API Key at [Official Valorant Developer Portal](https://developer.riotgames.com/)
 
 2. Clone the repo
 
 ```sh
 git clone https://github.com/YASSINE-AA/PyValo
 ```
-
-3. Install requests module
-
-```
-pip install requests #On Windows
-pip3 install requests #On Linux
-```
+Happy Coding!
 
 #### Install PyValo API Via PIP package manager
 ```
@@ -137,19 +130,6 @@ Get list of matches by queue in JSON format:
 ```python
 list_of_matches = match_api.get_matches_by_queue(queue)
 ```
-
-
-## Contributing
-
-
-
-### Creating A Pull Request
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## Authors
 

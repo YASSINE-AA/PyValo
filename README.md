@@ -46,7 +46,7 @@ Working APIs for the moment are:
 
 ## Getting Started
 
-You first need to get an API key from the official valorant developer portal:
+You first need to get an API key from the official valorant developer portal: https://https://developer.riotgames.com/
 
 
 

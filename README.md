@@ -25,7 +25,6 @@ https://pypi.org/project/pyvaloapi/1.0.6/
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Contributing](#contributing)
 * [Authors](#authors)
 
 

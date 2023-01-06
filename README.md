@@ -105,7 +105,7 @@ content_api = client.content_api("eu")
 ```
 Example:
 We want to get the list of all skins in the game in JSON format:
-```
+```python
 list_of_skins = content_api.get_skins()
 print(list_of_skins)
 ```

@@ -34,6 +34,7 @@ Working APIs for the moment are:
 * Valorant Content API V1
 * Valorant Ranked API V1
 * Valorant Status API  V1
+* Valorant Match API V1
 
 
 ## Built With

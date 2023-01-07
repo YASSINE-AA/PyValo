@@ -1,5 +1,5 @@
 from .gen_access_token import gen_access_token
-from .request import Request
+from .request import Request, response_codes
 class RankedAPI:
 	
 	"""

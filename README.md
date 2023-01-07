@@ -17,6 +17,10 @@ https://pypi.org/project/pyvaloapi/1.0.6/
 
 ![Downloads](https://img.shields.io/github/downloads/YASSINE-AA/PyValo/total) ![Contributors](https://img.shields.io/github/contributors/YASSINE-AA/PyValo?color=dark-green) ![Issues](https://img.shields.io/github/issues/YASSINE-AA/PyValo) ![License](https://img.shields.io/github/license/YASSINE-AA/PyValo) 
 
+#### Install PyValo API Via PIP package manager
+```
+pip install pyvaloapi
+```
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
@@ -54,7 +58,7 @@ pip install requests #On Windows
 pip3 install requests #On Linux/Mac
 ```
 
-### Installation
+### Setting Up
 
 1. Get a RIOT API Key at [Official Valorant Developer Portal](https://developer.riotgames.com/)
 
@@ -63,11 +67,7 @@ pip3 install requests #On Linux/Mac
 ```sh
 git clone https://github.com/YASSINE-AA/PyValo
 ```
-
-#### Install PyValo API Via PIP package manager
-```
-pip install pyvaloapi
-```
+3. Start Coding!
 
 ## Usage
 

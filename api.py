@@ -3,9 +3,6 @@ from valorant_apis.ranked_api import RankedAPI
 from valorant_apis.status_api import StatusAPI
 from valorant_apis.content_api import ContentAPI
 
-response_codes = {"400":"Bad request","401":"Unauthorized","403":"Forbidden","404":"Data not found","405":"Method not allowed","415":"Unsupported media type","429":"Rate limit exceeded","500":"Internal server error","502":"Bad gateway","503":"Service unavailable","504":"Gateway timeout"}
-
-
 class PyValoClient:
 	def __init__(self, API_KEY):
 		self.API_KEY = API_KEY

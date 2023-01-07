@@ -15,7 +15,7 @@ https://pypi.org/project/pyvaloapi/1.0.6/
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/YASSINE-AA/PyValo/total) ![Contributors](https://img.shields.io/github/contributors/YASSINE-AA/PyValo?color=dark-green) ![Issues](https://img.shields.io/github/issues/YASSINE-AA/PyValo) ![License](https://img.shields.io/github/license/YASSINE-AA/PyValo) 
+![Contributors](https://img.shields.io/github/contributors/YASSINE-AA/PyValo?color=dark-green) ![Issues](https://img.shields.io/github/issues/YASSINE-AA/PyValo) ![License](https://img.shields.io/github/license/YASSINE-AA/PyValo) 
 
 #### Install PyValo API Via PIP package manager
 ```

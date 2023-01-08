@@ -34,7 +34,7 @@ pip install pyvaloapi
 
 ## About The Project
 
-This is just a simple python wrapper for the [Official Valorant API](https://developer.riotgames.com/apis)
+This is just a simple python wrapper for the [Official Valorant API](https://developer.riotgames.com/apis) and the Local Valorant API
 
 Working APIs for the moment are:
 * Valorant Content API V1
@@ -51,7 +51,7 @@ Working APIs for the moment are:
 
 ### Prerequisites
 
-* Requests module to send GET requests to the official API
+* Requests module to send GET requests to the official API and the In-game API
 
 ```
 pip install requests #On Windows

@@ -128,6 +128,57 @@ Get list of matches by queue in JSON format:
 ```python
 list_of_matches = match_api.get_matches_by_queue(queue)
 ```
+
+## InGame API Manipulation
+The InGameValorantAPI class sends api calls to the local valorant API. Its features are limited for the moment but here's what you can currently do:
+
+1. First,  We need to start the game and access the lobby.
+
+
+2. Initialize the InGameValorantAPI class like this:
+```python 
+in_game_api = InGameValorantAPI.init_from_lockFile()
+```
+Now we can finally:
+* Get a JSON object of your friends list via get_friends(json=True)
+```python
+friends_list = in_game_api.get_friends(json=True)
+for friend in friends_list:
+  print(friend["game_name"], friend["game_tag"], sep="#")
+```
+
+* Add Friend via the add_friend(gameName, tagLine) method
+```python
+response_code = in_game_api.add_friend("bestfriend", "0000") 
+print(response_code) # 200 if successful
+```
+
+* Remove Friend :( via the remove_friend(puuid) method
+```python
+response_code = in_game_api.remove_friend(player_puuid) 
+print(response_code) # 200 if successful
+```
+
+* Get Friend Requests via get_friend_requests(json=True)
+```python
+  friend_requests = in_game_api.get_friend_requests(json=True)
+```
+
+* Get the Latest Messages via the get_messages(json) method
+```python
+latest_messages = in_game_api.get_messages(json=True) # Get In Json Format else it returns a raw string
+
+# Display them
+for message in latest_messages:
+  print(message["game_name"], message["body"], sep=":")
+```
+
+* Send Message via the send_message(message, mid) method
+```python
+response_code = in_game_api.send_message(message_body, mid)
+print(response_code) # 200 if successful
+```
+
 Happy Coding!
 ## Authors
 

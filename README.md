@@ -130,10 +130,9 @@ list_of_matches = match_api.get_matches_by_queue(queue)
 ```
 
 ## In-game API Manipulation
-The InGameValorantAPI class sends api calls to the local valorant API. Its features are limited for the moment but here's what you can currently do:
+The InGameValorantAPI class sends api calls to the local valorant API. Its features are limited for the moment.
 
-1. First,  We need to start the game and access the lobby.
-
+1. First,  you need to start the game and access the lobby.
 
 2. Initialize the InGameValorantAPI class like this:
 ```python 

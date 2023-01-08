@@ -29,6 +29,7 @@ pip install pyvaloapi
   * [Prerequisites](#prerequisites)
   * [Setting Up](#setting-up)
 * [Usage](#usage)
+* [In-game API](#in-game-api-manipulation)
 * [Authors](#authors)
 
 

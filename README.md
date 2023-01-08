@@ -129,7 +129,7 @@ Get list of matches by queue in JSON format:
 list_of_matches = match_api.get_matches_by_queue(queue)
 ```
 
-## InGame API Manipulation
+## In-game API Manipulation
 The InGameValorantAPI class sends api calls to the local valorant API. Its features are limited for the moment but here's what you can currently do:
 
 1. First,  We need to start the game and access the lobby.

@@ -1,4 +1,4 @@
-# This class manages requests to the local valorant game API
+# This class manages requests to the local and pvpnet valorant game API
 from request_class import Request
 from os import path
 import base64

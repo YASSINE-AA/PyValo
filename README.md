@@ -72,6 +72,7 @@ unofficial_api = client.unofficial_api()
 
 ## Example of an instalock bot
 #### DO NOT USE THIS FOR INSTALOCKING
+In this example we're locking the agent "Jett".
 ```python
 from pyvaloapi import ValorantClient
 client = ValorantClient()

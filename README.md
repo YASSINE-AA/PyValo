@@ -34,7 +34,7 @@ pip install pyvaloapi
 
 ## About The Project
 
-Unofficial Valorant API that directly with the Riot Client.
+Unofficial Valorant API that directly interacts with the Riot Client.
 
 ## Getting Started
 

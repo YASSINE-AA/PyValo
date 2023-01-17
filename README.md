@@ -49,14 +49,12 @@ pip3 install requests #On Linux/Mac
 
 ### Setting Up
 
-1. Get a RIOT API Key at [Official Valorant Developer Portal](https://developer.riotgames.com/)
-
-2. Clone the repo
+1. Clone the repo
 
 ```sh
 git clone https://github.com/YASSINE-AA/PyValo
 ```
-3. Start Coding!
+2. Start Coding!
 
 ## Usage
 

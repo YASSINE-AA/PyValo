@@ -40,7 +40,7 @@ Unofficial Valorant API that directly with the Riot Client.
 
 ### Prerequisites
 
-* Requests module to send GET requests to the official API and the In-game API
+* Requests module to send GET requests to local api and pvpnet
 
 ```
 pip install requests #On Windows

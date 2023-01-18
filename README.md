@@ -9,7 +9,7 @@
   <p align="center">
     Unofficial Valorant API for Python
     <br /><p align="center">
-https://pypi.org/project/pyvaloapi/1.0.9.post0/
+https://pypi.org/project/pyvaloapi/1.1.3/
 </p>
 
   </p>
@@ -78,7 +78,7 @@ from pyvaloapi import ValorantClient
 client = ValorantClient()
 unofficial_api = client.unofficial_api()
 while("MatchID" not in unofficial_api.get_current_pregame(unofficial_api.get_current_player_puuid())): pass
-unofficial_api.lock_pregame_agent(unofficial_api.get_current_pregame_id(), "add6443a-41bd-e414-f6ad-e58d267f4e95")
+unofficial_api.lock_pregame_agent("add6443a-41bd-e414-f6ad-e58d267f4e95")
 ```
 
 Happy Coding!

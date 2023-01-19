@@ -86,6 +86,11 @@ unofficial_api.lock_pregame_agent("add6443a-41bd-e414-f6ad-e58d267f4e95")
 ```
 
 Happy Coding!
+
+## Support
+
+<a href="https://www.buymeacoffee.com/yassineaa" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
 ## Authors
 
 * **Yassine Ahmed Ali** - *Computer Engineering Student* - [Yassine Ahmed Ali](https://github.com/YASSINE-AA) - *Developer*

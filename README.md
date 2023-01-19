@@ -66,6 +66,7 @@ Initialize the client class
 
 ```python
 from pyvaloapi import ValorantClient
+
 client = ValorantClient()
 ```
 

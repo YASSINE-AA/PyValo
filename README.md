@@ -79,10 +79,15 @@ unofficial_api = client.unofficial_api()
 In this example we're locking the agent "Jett".
 ```python
 from pyvaloapi import ValorantClient
+
 client = ValorantClient()
+
 unofficial_api = client.unofficial_api()
+
 while("MatchID" not in unofficial_api.get_current_pregame(unofficial_api.get_current_player_puuid())): pass
+
 unofficial_api.lock_pregame_agent("add6443a-41bd-e414-f6ad-e58d267f4e95")
+
 ```
 
 Happy Coding!

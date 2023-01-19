@@ -9,7 +9,7 @@
   <p align="center">
     Unofficial Valorant API for Python
     <br /><p align="center">
-https://pypi.org/project/pyvaloapi/1.1.3/
+https://pypi.org/project/pyvaloapi/1.1.5/
 </p>
 
   </p>
@@ -21,6 +21,10 @@ https://pypi.org/project/pyvaloapi/1.1.3/
 ```
 pip install pyvaloapi
 ```
+
+## What's new!
+Ping a specific valorant server via the get_valorant_server_ping(region) method from the UnofficialAPI Class.
+
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
@@ -34,7 +38,7 @@ pip install pyvaloapi
 
 ## About The Project
 
-Unofficial Valorant API that directly interacts with the Riot Client.
+Unofficial Valorant API that interacts with the Riot Client.
 
 ## Getting Started
 

@@ -9,7 +9,7 @@
   <p align="center">
     Unofficial Valorant API for Python
     <br /><p align="center">
-https://pypi.org/project/pyvaloapi/1.1.5/
+https://pypi.org/project/pyvaloapi/1.2/
 </p>
 
   </p>

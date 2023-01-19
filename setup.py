@@ -1,10 +1,11 @@
 from setuptools import setup, find_packages
 import codecs
 import os
+from pathlib import Path
+this_directory = Path(__file__).parent
+LONG_DESCRIPTION = (this_directory / "README.md").read_text()
 
-VERSION = '1.0.8'
-DESCRIPTION = 'Unofficial Valorant API for Python'
-LONG_DESCRIPTION = 'A Python module that allows you to directly interact with the Valorant Game Client.'
+VERSION = '1.1.4'
 
 # Setting up
 setup(
@@ -12,7 +13,6 @@ setup(
     version=VERSION,
     author="Mohamed Yassine Ahmed Ali",
     author_email="<yassineahmedali02@gmail.com>",
-    description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),

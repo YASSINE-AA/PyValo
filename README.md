@@ -23,7 +23,7 @@ pip install pyvaloapi
 ```
 
 ## What's new!
-Ping a specific valorant server via the get_valorant_server_ping(region) method from the UnofficialAPI Class.
+Ping a specific valorant server via the ``get_valorant_server_ping(region)`` method from the UnofficialAPI Class.
 
 ## Table Of Contents
 

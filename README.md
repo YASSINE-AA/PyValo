@@ -24,6 +24,16 @@ pip install pyvaloapi
 
 ## What's new!
 Ping a specific valorant server via the ``get_valorant_server_ping(region)`` method from the UnofficialAPI Class.
+| Region        | Server address|
+| ------------- | ------------- |
+|EU-WEST | dynamodb.eu-west-3.amazonaws.com|
+|EU-CENTRAL| dynamodb.eu-central-1.amazonaws.com|
+|EU-NORTH| dynamodb.eu-north-1.amazonaws.com|
+|NA-WEST| dynamodb.us-west-1.amazonaws.com|
+|NA-NORTH-WEST| dynamodb.us-west-2.amazonaws.com|
+|NA-CENTRAL| dynamodb.us-east-2.amazonaws.com|
+|ASIA-NORTH| dynamodb.ap-northeast-2.amazonaws.com|
+|ASIA-WEST| dynamodb.ap-northeast-1.amazonaws.com|
 
 ## Table Of Contents
 
